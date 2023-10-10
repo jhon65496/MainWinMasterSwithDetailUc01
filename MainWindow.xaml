@@ -1,0 +1,81 @@
+﻿<Window x:Class="MainWinMasterUcDetailUcSwithFrm02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainWinMasterUcDetailUcSwithFrm02"
+        xmlns:vm="clr-namespace:MainWinMasterUcDetailUcSwithFrm02.ViewModels"
+        d:DataContext="{d:DesignInstance Type=vm:GroupsViewModel, IsDesignTimeCreatable=True}"
+        mc:Ignorable="d"
+        Title="{Binding Title}" 
+        Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" MinWidth="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Группы-->
+        <GroupBox Grid.Column="0" Header="Меню">
+            <DockPanel>
+                <UniformGrid DockPanel.Dock="Top" Rows="1" Margin="3,9">
+                    <UniformGrid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Margin" Value="1,0"/>
+                            <!--<Setter Property="Padding" Value="25,5"/>-->
+                        </Style>
+                    </UniformGrid.Resources>
+                    <Button Content="Load"
+                            Command="{Binding TestCommand}"/>
+                    <Button Content="Output"
+                            Command="{Binding TestCommand2}"/>
+                    <Button Content="Create"
+                            Command="{Binding TestCommand2}"/>
+                    <Button Content="Update"
+                            Command="{Binding TestCommand2}"/>
+                    
+                    
+                </UniformGrid>
+                <UniformGrid DockPanel.Dock="Top" Rows="1" Margin="3,9">
+                    <UniformGrid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Margin" Value="1,0"/>
+                            <!--<Setter Property="Padding" Value="25,5"/>-->
+                        </Style>
+                    </UniformGrid.Resources>                    
+                    <Button Content="Delete"
+                            Command="{Binding TestCommand2}"/>
+                    <Button Content="DeleteAll"
+                            Command="{Binding TestCommand2}"/>
+
+                </UniformGrid>
+
+                <ListBox ItemsSource="{Binding Groups}" 
+                         SelectedItem="{Binding SelectedGroup}"                          
+                         Name="MainMenu"
+                         SelectedIndex="1">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" 
+                        Value="Stretch"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="m:Group">
+                            <DockPanel>
+                                <TextBlock Text="{Binding Name}"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </GroupBox>
+        <GroupBox Header="Панель" Grid.Column="1">
+            <ContentControl Content="{Binding DetailView}" />
+        </GroupBox>
+
+        <GridSplitter Grid.Column="0" HorizontalAlignment="Right" Width="3"/>
+    </Grid>
+</Window>
