@@ -22,8 +22,8 @@ namespace MainWinMasterUcDetailUcSwithFrm02.ViewModels
         {
             groupRepository = new GroupRepository();
             
-
             LoadData();
+            SelectedGroup = Groups[2];
         }
 
         #region Title свойство

@@ -62,7 +62,7 @@
                 <ListBox ItemsSource="{Binding Groups}" 
                          SelectedItem="{Binding SelectedGroup}"                          
                          Name="MainMenu"
-                         SelectedIndex="0">
+                         >
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="HorizontalContentAlignment" 
