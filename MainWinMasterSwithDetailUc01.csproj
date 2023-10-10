@@ -62,6 +62,7 @@
     <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
+    <Compile Include="ViewModels\Design\GroupsDesignModel.cs" />
     <Compile Include="ViewModels\GroupsViewModel.cs" />
     <Compile Include="ViewModels\GroupViewModel.cs" />
     <Compile Include="View\View\GroupDetailView.xaml.cs">

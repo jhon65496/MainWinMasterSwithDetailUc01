@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainWinMasterUcDetailUcSwithFrm02"
         xmlns:vm="clr-namespace:MainWinMasterUcDetailUcSwithFrm02.ViewModels"
+        xmlns:vmd="clr-namespace:MainWinMasterUcDetailUcSwithFrm02.ViewModels.Design"
         xmlns:v="clr-namespace:MainWinMasterUcDetailUcSwithFrm02.View.View"
-        d:DataContext="{d:DesignInstance Type=vm:GroupsViewModel, IsDesignTimeCreatable=True}"
+        d:DataContext="{x:Static vmd:GroupsDesignModel.ViewModel}"
         mc:Ignorable="d"
         Title="{Binding Title}" 
         Height="450" Width="800">
