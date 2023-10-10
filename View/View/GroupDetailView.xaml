@@ -22,9 +22,9 @@
                         <Setter Property="Background" Value="White"/>
                     </Style>
                 </UniformGrid.Resources>
-                <Button Content="Ok" IsDefault="True" FontWeight="Bold" Command="{Binding  CommitCommand}"/>
-                <Button Content="Restore" Command="{Binding RejectCommand}"/>
-                <Button Content="Cancel" IsCancel="True" Command="{Binding CancelCommand}"/>
+                <!--<Button Content="Ok" IsDefault="True" FontWeight="Bold" Command=""/>
+                <Button Content="Restore" Command=""/>
+                <Button Content="Cancel" IsCancel="True" Command=""/>-->
             </UniformGrid>
             <Grid Margin="5">
                 <Grid.Resources>
@@ -60,13 +60,9 @@
                 <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Group.Description}"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Дата регистрации:"/>
-                <DatePicker Grid.Column="1" Grid.Row="3" SelectedDate="{Binding Birthday}" Margin="0,3"/>
+                <DatePicker Grid.Column="1" Grid.Row="3" SelectedDate="" Margin="0,3"/>
 
-                <TextBlock Grid.Column="0" Grid.Row="4" Text="Отдел:"/>
-                <ComboBox Grid.Column="1" Grid.Row="4" 
-                      SelectedItem="{Binding Department}" 
-                      ItemsSource="{Binding Departments}"
-                      DisplayMemberPath="Name"/>
+                <TextBlock Grid.Column="0" Grid.Row="4" Text="Отдел:"/>                
 
             </Grid>
         </DockPanel>
