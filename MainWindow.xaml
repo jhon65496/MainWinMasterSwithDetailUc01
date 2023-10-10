@@ -60,7 +60,7 @@
                 </UniformGrid>
 
                 <ListBox ItemsSource="{Binding Groups}" 
-                         SelectedItem="{Binding SelectedGroup}"                          
+                         SelectedItem="{Binding SelectedGroup}"                                                   
                          Name="MainMenu"
                          >
                     <ListBox.ItemContainerStyle>
