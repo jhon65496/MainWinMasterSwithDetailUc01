@@ -17,7 +17,7 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" MinWidth="200"/>
+            <ColumnDefinition Width="320" MinWidth="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -61,7 +61,7 @@
                 <ListBox ItemsSource="{Binding Groups}" 
                          SelectedItem="{Binding SelectedGroup}"                          
                          Name="MainMenu"
-                         SelectedIndex="1">
+                         SelectedIndex="0">
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="HorizontalContentAlignment" 
