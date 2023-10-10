@@ -62,19 +62,21 @@
                          SelectedItem="{Binding SelectedGroup}"                          
                          Name="MainMenu"
                          SelectedIndex="0">
-                    <ListBox.ItemContainerStyle>
+                    <ListBox.ItemContainerStyle>                        
                         <Style TargetType="ListBoxItem">
                             <Setter Property="HorizontalContentAlignment" 
                         Value="Stretch"/>
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <DockPanel>
-                                <TextBlock Text="{Binding Name}"/>
-                            </DockPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <DockPanel>
+                                            <TextBlock Text="{Binding Name}"/>
+                                        </DockPanel>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>                        
+                    </ListBox.ItemContainerStyle>                    
                 </ListBox>
             </DockPanel>
         </GroupBox>
