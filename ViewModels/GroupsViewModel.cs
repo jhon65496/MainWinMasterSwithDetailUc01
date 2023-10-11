@@ -46,7 +46,7 @@ namespace MainWinMasterUcDetailUcSwithFrm02.ViewModels
             {
                 selectedGroup = value;
                 ChangeCurrentView("Detail");
-                RaisePropertyChanged(nameof(SelectedGroup));
+                // RaisePropertyChanged(nameof(SelectedGroup));
             }
         }
         #endregion
@@ -60,7 +60,7 @@ namespace MainWinMasterUcDetailUcSwithFrm02.ViewModels
             set 
             {
                 detailView = value;
-                RaisePropertyChanged(nameof(DetailView));
+                // RaisePropertyChanged(nameof(DetailView));
             }
         }
 
